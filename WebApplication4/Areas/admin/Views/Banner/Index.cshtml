@@ -1,0 +1,27 @@
+﻿@model BannerVM
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Describtion</th>
+            <th scope="col">FrontImage</th>
+            <th scope="col">BackImage</th>
+            <th scope="col">Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Title</td>
+            <td>@Model.Describtion</td>
+            <td><img width="100" src="@Model.FrontImagePath"></td>
+            <td>
+                @if (@Model.BackImagePath != null)
+                {
+                    <img width="100" src="@Model.BackImagePath">
+                }
+            </td>
+            <td><a asp-action="Edit" asp-controller="Banner">Click Me</a></td>
+        </tr>
+    </tbody>
+</table>

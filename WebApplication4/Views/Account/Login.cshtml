@@ -1,0 +1,39 @@
+﻿@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="contact-sec" id="contact-sec">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 contact-box text-center text-md-left wow slideInRight" data-wow-delay=".8s">
+                <div class="c-box wow fadeInRight">
+                    <h4 class="small-heading">Login</h4>
+                    <form class="contact-form" id="contact-form-data" method="post">
+                        <div class="row my-form">
+
+
+                            <div class="col-12 col-md-6">
+                                <input asp-for="username"
+                                       type="text" class="form-control" id="candidate_fname" placeholder="username">
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <input asp-for="password" class="form-control" id="candidate_lname" placeholder="password">
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-primary contact_btn" type="submit">
+                                    SUBMIT
+                                </button>
+                            </div>
+
+                            <div class="col-md-12 col-sm-12" asp-validation-summary="ModelOnly"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
